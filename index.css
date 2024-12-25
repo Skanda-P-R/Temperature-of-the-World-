@@ -55,6 +55,10 @@ html, body {
   align-items: center;
   height: 100vh; 
   background-color: #f8f9fa; 
+  background-image: url('bg.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 
 #dynamic-image {
