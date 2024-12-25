@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <link type='text/css' rel='stylesheet' href='css/bootstrap.min.css' />
+    <link type='text/css' rel='stylesheet' href='index.css' />
+
+    <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            // Change the image based on the year selected from the dropdown
+            $('.rc-year a').click(function (e) {
+                e.preventDefault(); // Prevent the default action
+                const year = $(this).text();
+                $('#map-image').attr('src', 'images/image' + year + '.png'); // Set image source based on selected year
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id='image-container'>
+        <img id='map-image' src='images/image2000.png' alt='World Map for Year 2000'>
+    </div>
+
+    <nav class='navbar navbar-default navbar-fixed-top'>
+        <div class='container-fluid'>
+            <div class='navbar-header'>
+                <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false'>
+                    <span class='sr-only'>Toggle navigation</span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+                <div id='title'>Heatwave Prediction</div>
+            </div>
+            <div class='collapse navbar-collapse' id='navbar'>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li class='dropdown'>
+                        <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
+                            <div class='rc-item'>
+                                <div class='rc-itemTitle'>Year</div>
+                                <div class='rc-itemValue'></div>
+                            </div>
+                            <span class='caret'></span>
+                        </a>
+                        <ul class='dropdown-menu rc-year'>
+                            <li><a href='#'>2000</a></li>
+                            <li><a href='#'>2001</a></li>
+                            <li><a href='#'>2002</a></li>
+                            <li><a href='#'>2003</a></li>
+                            <li><a href='#'>2004</a></li>
+                            <li><a href='#'>2005</a></li>
+                            <li><a href='#'>2010</a></li>
+			    <li><a href='#'>2015</a></li>
+                            <li role='separator' class='divider'></li>
+                            <li><a href='#'>2020</a></li>
+                            <li><a href='#'>2030</a></li>
+                            <li><a href='#'>2040</a></li>
+                            <li><a href='#'>2050</a></li>
+                            <li><a href='#'>2060</a></li>
+                            <li><a href='#'>2070</a></li>
+                            <li><a href='#'>2080</a></li>
+                            <li><a href='#'>2090</a></li>
+                            <li><a href='#'>2100</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</body>
+
+</html>
